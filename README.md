@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
+# NXRts.dev | Professional Code Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![NXRts.dev Preview](public/NXRts-dev.png)
 
-Currently, two official plugins are available:
+A high-performance, responsive, and animated portfolio website built for the modern web.  
+Showcasing technical expertise with a clean, user-centric design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## React Compiler
+*   **Core:** [React 18](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vitejs.dev/)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+*   **Animation:** [Framer Motion](https://www.framer.com/motion/)
+*   **Icons:** [Google Material Symbols](https://fonts.google.com/icons)
+*   **Fonts:** [Manrope](https://fonts.google.com/specimen/Manrope)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features
 
-## Expanding the ESLint configuration
+*   **⚡ Blazing Fast Performance:** Powered by Vite bundler/build tool.
+*   **🎨 Glassmorphism UI:** Modern aesthetic with backdrop blur effects.
+*   **🎭 Smooth Animations:**
+    *   **Scroll & Reveal:** Elements fade and slide in as you explore.
+    *   **Staggered Lists:** Project cards and skills load sequentially.
+    *   **ScrollSpy Navbar:** Active link updates automatically based on scroll position.
+    *   **Interactive Pill:** Smooth sliding background for navigation items.
+*   **📱 Fully Responsive:** Optimized for all devices, from mobile phones to 4k desktops.
+*   **♿ Accessible:** Semantic HTML structure and focus management.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Installation & Setup
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/NXRts/DEVGALLERY.git
+    cd DEVGALLERY
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2.  **Install dependencies**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/      # Reusable UI components
+│   ├── Navbar.tsx   # Sticky header with ScrollSpy
+│   ├── Hero.tsx     # Landing section
+│   ├── Reveal.tsx   # Animation wrapper
+│   └── ...
+├── index.css        # Tailwind directives & global styles
+├── App.tsx          # Main application layout
+└── main.tsx         # Entry point
+public/
+├── vite.svg         # Favicon
+└── NXRts-dev.png    # Preview Image
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📄 License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is open-source and available under the [MIT License](LICENSE).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+© 2026 NXRts.dev. Designed & Built with ❤️.
