@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 export default function FeaturedWork() {
   const projects = [
     {
@@ -41,50 +43,55 @@ export default function FeaturedWork() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-32" id="work">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-        <div className="space-y-4">
-          <h2 className="text-4xl font-extrabold tracking-tight">Featured Work</h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-lg">
-            A selection of high-performance digital solutions optimized for speed
-            and user engagement.
-          </p>
-        </div>
-        <a
-          className="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all"
-          href="#"
-        >
-          View Archive <span className="material-symbols-outlined">arrow_forward</span>
-        </a>
+        <Reveal>
+            <div className="space-y-4">
+            <h2 className="text-4xl font-extrabold tracking-tight">Featured Work</h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-lg">
+                A selection of high-performance digital solutions optimized for speed
+                and user engagement.
+            </p>
+            </div>
+        </Reveal>
+        <Reveal delay={0.2}>
+            <a
+            className="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all"
+            href="#"
+            >
+            View Archive <span className="material-symbols-outlined">arrow_forward</span>
+            </a>
+        </Reveal>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className="project-card group bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all"
-          >
-            <div className="aspect-video overflow-hidden">
-              <img
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                alt={project.title}
-                src={project.image}
-              />
-            </div>
-            <div className="p-8 space-y-4">
-              <div className="flex gap-2">
-                {project.tags.map((tag, i) => (
-                    <span key={i} className="text-[10px] font-bold uppercase tracking-wider bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
-                        {tag}
+          <Reveal key={index} delay={index * 0.1} width="100%">
+            <div
+                className="project-card group bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all cursor-pointer"
+            >
+                <div className="aspect-video overflow-hidden">
+                <img
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    alt={project.title}
+                    src={project.image}
+                />
+                </div>
+                <div className="p-8 space-y-4">
+                <div className="flex gap-2">
+                    {project.tags.map((tag, i) => (
+                        <span key={i} className="text-[10px] font-bold uppercase tracking-wider bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+                <h3 className="text-xl font-bold">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    <span className="font-bold text-primary block mb-1 uppercase tracking-tighter text-xs">
+                    Result:
                     </span>
-                ))}
-              </div>
-              <h3 className="text-xl font-bold">{project.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                <span className="font-bold text-primary block mb-1 uppercase tracking-tighter text-xs">
-                  Result:
-                </span>
-                {project.result}
-              </p>
+                    {project.result}
+                </p>
+                </div>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

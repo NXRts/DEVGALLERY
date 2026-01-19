@@ -7,11 +7,11 @@ export default function Footer() {
             <span className="material-symbols-outlined text-sm">code</span>
           </div>
           <span className="text-sm font-bold tracking-tighter uppercase">
-            DevGallery
+            NXRts.dev
           </span>
         </div>
         <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">
-          © {new Date().getFullYear()} DevGallery. All rights reserved. Designed for performance.
+          © {new Date().getFullYear()} NXRts.dev. All rights reserved. Designed for performance.
         </p>
         <div className="flex gap-6">
           <a
